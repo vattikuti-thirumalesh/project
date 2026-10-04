@@ -1,0 +1,158 @@
+/* basic elements of html 
+1)block elements - setups and takes the entire line like an p tag 
+2)inline block elements - takes the only desired spaces like an image and searchbar
+3)inline elements - takes the only desired space for text like an strong tag*/
+/* we can apply properties for the tags at a time by using , */
+/* .thumbnail{
+    /* images properties : when we change the width of an image the height of the image also changes , so the dimensions will be equal  */
+    /* object-fit: cover; this will cover a certain area that gives by us like height and width  */
+    /* contain shrinks the image upto the desired area would be filled with that image */
+    /* object-fit: contain; */
+      .header{
+        display:flex;
+        height: 58px;
+        flex-direction: row;
+        justify-content: space-between;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        background-color: white;
+
+        border-bottom-width:1px ;
+        border-bottom-style:solid ;
+        border-bottom-color: rgb(213, 210, 210);
+        z-index:100;
+      }
+      .left-section{
+        display:flex;
+        align-items: center;
+      }
+      .middle-section {
+        flex:1;
+        margin-left: 70px;
+        margin-right:35px;
+        max-width: 500px;
+        display: flex;
+        align-items: center;
+      }
+      .search-button{
+        height:44px; 
+        width:60px;
+        background-color: rgb(240, 240, 240);
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(192,192,192);
+        margin-left: -1px;
+        margin-right:10px;
+        position: relative;
+
+      }
+      .search-button,
+      .voice-search-button,
+      .upload-icon-container,
+      .youtube-container,
+      .notification-container{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position:relative;
+      }
+      .search-button .tooltip,
+      .voice-search-button .tooltip,
+      .upload-icon-container .tooltip,
+      .youtube-container .tooltip,
+      .notification-container .tooltip
+      {
+        font-family: Roboto , Arial;
+        position:absolute;
+        background-color: grey;
+        color:white;
+        padding-top:4px;
+        padding-bottom:4px;
+        padding-right:8px;
+        padding-left:8px;
+        border-radius: 2px;
+        font-size: 12px;
+        bottom:-30px;
+        opacity:0;
+        transition: opacity 0.15s;
+        pointer-events:none;
+        white-space: nowrap;
+
+      }
+      .search-button:hover .tooltip,
+      .voice-search-button:hover .tooltip,
+      .upload-icon-container:hover .tooltip,
+      .youtube-container:hover .tooltip,
+      .notification-container:hover .tooltip
+      {
+        opacity:1;
+      }
+      .search-bar::placeholder{
+        font-family: Roboto , Arial;
+        font-size:16px;
+      }
+      .voice-search-button{
+        height:40px;
+        width:40px;
+        border-style: solid;
+        margin-left:4px;
+        border-radius: 20px;
+        border:none;
+        background-color: rgb(245,245,245);
+      }
+      .voice-search-icon{
+        height:24px;
+      }
+      .hamburger-menu{
+        height:24px;
+        margin-left:24px;
+        margin-right:18px;
+      }
+      .youtube-logo{
+        height:24px;
+        width:100px;
+      }
+      .search-bar{
+        flex:1;
+        height:40px;
+        padding-left:10px;
+        font-size:16px;
+        border-width:1px;
+        border-style: solid;
+        border-color: rgb(192,192,192);
+        border-radius: 2px;
+        box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
+        /* For shrinking purpose we put width:0 */
+        width:0;
+      }
+      .search-logo{
+        height: 22px;
+      }
+      .right-section{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:180px;
+        margin-right:20px;
+        /* to prevent flex box shrinking we are using flex-shrink:0 */
+        flex-shrink:0;
+      }
+      .upload-icon{
+        height:24px;
+        justify-content: space-between;
+      }
+      .youtube-apps{
+        height:24px;
+      }
+
+      .notification-icon{
+        height: 24px;
+      }
+
+
+      .current-user{
+        height:32px;
+        border-radius: 50%;
+      }
